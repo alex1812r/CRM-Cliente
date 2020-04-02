@@ -36,7 +36,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 }
 
 const App = () => {
-  console.log(process.env.REACT_APP_BACKEND_URL)
   // UTILIZAR CONTEXT EN EL COMPONENTE
   const [auth, guardarAuth] = useContext(CRMContext);
   
