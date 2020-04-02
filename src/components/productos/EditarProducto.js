@@ -93,7 +93,11 @@ const EditarProduto = () => {
   let imagen = null;
   if(producto.imagen)
     imagen = (
-      <img src={`http://localhost:5000/${producto.imagen}`} alt="producto-imagen" width="300px"/>
+      <img 
+        src={`${process.env.REACT_APP_BACKEND_URL}/${producto.imagen}`} 
+        alt="producto-imagen" 
+        width="300px"
+      />
     );
 
   let contenido = <Spinner fullWidth />

@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 const Producto = ({ producto, eliminarProducto }) => {
 
   let imagen = producto.imagen
-    ? <img src={`http://localhost:5000/${producto.imagen}`} alt="producto-imagen"/> 
+    ? <img 
+        src={`${process.env.REACT_APP_BACKEND_URL}/${producto.imagen}`} 
+        alt="producto-imagen"
+      /> 
     : null
 
   return (
